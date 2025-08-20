@@ -1,0 +1,2 @@
+GET http://localhost:8000/verify-profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pdGhpbmFtYmF0aTlAZ21haWwuY29tIiwiaWF0IjoxNzIwNTgwNjczfQ.LlCh_8XyqDAM9X1CSLZiufTaRyRyjdGWUZqMwgkWF0s

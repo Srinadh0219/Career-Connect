@@ -1,0 +1,68 @@
+.jobs-posted-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.jobs-posted-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jobs-posted-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.job-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.job-item:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-item h4 {
+  margin: 0;
+  font-size: 1em;
+  color: #888;
+}
+
+.job-item h2 {
+  margin: 5px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.job-item p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1.5em;
+  color: #888;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

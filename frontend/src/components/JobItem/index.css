@@ -1,0 +1,21 @@
+.job-item {
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 330px;
+}
+
+.job-item:hover {
+  scale: 1.003;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 500px) {
+  .job-item {
+    width: 400px;
+  }
+}
