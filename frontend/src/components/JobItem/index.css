@@ -1,21 +1,9 @@
-.job-item {
-  border: 1px solid grey;
-  border-radius: 10px;
-  width: 330px;
+/* Modern Job Card */
+.modern-job-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 230px;
 }
 
-.job-item:hover {
-  scale: 1.003;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 500px) {
-  .job-item {
-    width: 400px;
-  }
+.modern-job-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }

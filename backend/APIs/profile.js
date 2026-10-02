@@ -80,8 +80,8 @@ router.put("/student", async (req, res) => {
       contactNumber,
       resume,
     } = req.body;
-    if (contactNumber.length !== 10) {
-      res.status(401).send("Invalid Contact Number");
+    if (contactNumber && contactNumber.length !== 10) {
+      return res.status(400).send("Invalid Contact Number");
     }
     const { email } = payload;
     const userDetails = await Student.updateOne(
@@ -98,9 +98,9 @@ router.put("/student", async (req, res) => {
         },
       }
     );
-    res.status(200).send(userDetails);
+    return res.status(200).send(userDetails);
   } catch (error) {
-    res.status(500).send("Internal Server Error");
+    return res.status(500).send("Internal Server Error");
   }
 });
 

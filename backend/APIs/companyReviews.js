@@ -10,25 +10,31 @@ router.get("/", async (req, res) => {
 
 //POST Company with rating
 router.post("/", async (req, res) => {
-  const { companyName, rating } = req.body;
-  const company = await CompanyReviews.findOne({ companyName: companyName });
-  if (company === null) {
-    const newCompany = new CompanyReviews({
-      companyName,
-      reviewScore: rating,
-      reviewsCount: 1,
-    });
-    await newCompany.save();
-  } else {
-    await CompanyReviews.updateOne(
-      { companyName: companyName },
-      {
-        $set: {
-          reviewScore: company.reviewScore + rating,
-          reviewsCount: company.reviewsCount + 1,
-        },
-      }
-    );
+  try {
+    const { companyName, rating } = req.body;
+    const company = await CompanyReviews.findOne({ companyName: companyName });
+    if (company === null) {
+      const newCompany = new CompanyReviews({
+        companyName,
+        reviewScore: rating,
+        reviewsCount: 1,
+      });
+      await newCompany.save();
+    } else {
+      await CompanyReviews.updateOne(
+        { companyName: companyName },
+        {
+          $set: {
+            reviewScore: company.reviewScore + rating,
+            reviewsCount: company.reviewsCount + 1,
+          },
+        }
+      );
+    }
+    return res.status(200).send("Review added successfully");
+  } catch (error) {
+    console.error("Error adding review:", error);
+    return res.status(500).send("Internal Server Error");
   }
 });
 

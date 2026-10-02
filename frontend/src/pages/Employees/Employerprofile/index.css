@@ -1,12 +1,4 @@
+/* Employer Profile Styles */
 .profile-page-bg-container {
-  min-height: 90vh;
-}
-
-.profile-page-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile-page-container button {
-  align-self: flex-start;
+  min-height: 100vh;
 }

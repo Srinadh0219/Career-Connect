@@ -25,6 +25,10 @@ import { Navigate } from "react-router-dom";
 
 const EmployerHeaderContent = [
   {
+    title: "Home",
+    link: "/employer",
+  },
+  {
     title: "Post Job",
     link: "/employer/jobs/posting",
   },
@@ -51,6 +55,10 @@ const EmployerHeaderContent = [
 ];
 
 const StudentHeaderContent = [
+  {
+    title: "Home",
+    link: "/student",
+  },
   {
     title: "Company Reviews",
     link: "/student/company-reviews",

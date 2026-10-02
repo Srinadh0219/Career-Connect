@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const MONGO_URI =
+  process.env.MONGO_URI ||
   "mongodb+srv://nithinambati2:yLbT7wHeE14Surh1@cluster0.9qpuxmc.mongodb.net/jobby?retryWrites=true&w=majority";
+
 
 mongoose
   .connect(MONGO_URI, {})

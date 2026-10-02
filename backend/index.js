@@ -1,3 +1,8 @@
+const buffer = require("buffer");
+if (!buffer.SlowBuffer) {
+  buffer.SlowBuffer = buffer.Buffer;
+}
+
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -11,10 +16,13 @@ app.use(cors());
 
 app.use("/", routes);
 
+const PORT = process.env.PORT || 8000;
+
 const startServer = () => {
-  app.listen(8000, () => {
-    console.log("server listening on 8000...");
+  app.listen(PORT, () => {
+    console.log(`server listening on ${PORT}...`);
   });
 };
 
 startServer();
+
