@@ -10,10 +10,6 @@ A full-stack **MERN** job portal web application connecting ambitious candidates
 
 ---
 
-## 🌐 Live Demo
-
-👉 **[https://careerconnect-neon.vercel.app](https://careerconnect-neon.vercel.app)**
-
 ---
 
 ## ✨ Key Features
